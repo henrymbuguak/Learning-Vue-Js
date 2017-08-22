@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue js Tutorial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div id="vue-app">
+            <h1 class="text-center text-info">{{ title }}</h1>
+            <h3>Welcome to Henry Tutorial</h3>
+            <button type="button" name="button" class="btn btn-success" v-on:click.once="add(1)">Add a year</button>
+            <button type="button" name="button" class="btn btn-success" v-on:click="subtract(1)">Subtract a year</button>
+            <p>My age is {{ age }}</p>
+            <hr>
+            <p>Reacting on double click event</p>
+            <button type="button" name="button" class="btn btn-success" v-on:dblclick="add(10)">Add 10 years</button>
+            <button type="button" name="button" class="btn btn-success" v-on:dblclick="subtract(10)">Subtract 10 years</button>
+            <br>
+            <hr>
+            <p>Tracking mouse over the canvas</p>
+            <div id="canvas" v-on:mousemove="updateXY">
+              {{x}}, {{y}}
+            </div>
+            <a v-on:click="click" href="https://github.com/henrymbuguak/Learning-Vue-Js">Vue Source</a>
+            <br>
+            <hr>
+            <h1>Keyboard Event</h1>
+            <label for="">Name: </label>
+            <input type="text" name="" value="" v-on:keyup.enter="logName">
+            <label for="">Age: </label>
+            <input type="text" name="" value="" v-on:keyup.enter="logAge">
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/vue.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/keyboardevent.js">
+
+  </script>
+  </body>
+</html>
