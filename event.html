@@ -13,7 +13,7 @@
           <div id="vue-app">
             <h1 class="text-center text-info">{{ title }}</h1>
             <h3>Welcome to Henry Tutorial</h3>
-            <button type="button" name="button" class="btn btn-success" v-on:click="add(1)">Add a year</button>
+            <button type="button" name="button" class="btn btn-success" v-on:click.once="add(1)">Add a year</button>
             <button type="button" name="button" class="btn btn-success" v-on:click="subtract(1)">Subtract a year</button>
             <p>My age is {{ age }}</p>
             <hr>
@@ -26,6 +26,7 @@
             <div id="canvas" v-on:mousemove="updateXY">
               {{x}}, {{y}}
             </div>
+            <a v-on:click="click" href="https://github.com/henrymbuguak/Learning-Vue-Js">Vue Source</a>
           </div>
 
 
